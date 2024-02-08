@@ -23,7 +23,7 @@
 #cont1 .nav-link{
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 20px ;
     padding: 5px 5px;
     margin: 0px 15px;
 }
@@ -33,12 +33,17 @@
   color: #F9A620 !important;
   border-bottom: 3px solid #F9A620;
   padding-bottom: 0px;
+  text-decoration: none;
 }
 
 .nav-item {
   position: relative;
-  padding: 10px;
-  margin-bottom: 10px; /* Increase the distance between the text and the next element */
+  color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px ;
+    padding: 5px 5px;
+    margin: 0px 15px; /* Increase the distance between the text and the next element */
+    text-decoration: none;
 }
 
 .nav-item.inactive {

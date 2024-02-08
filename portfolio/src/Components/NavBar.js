@@ -1,5 +1,6 @@
 import Container from "react-bootstrap/Container";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { NavLink,useLocation } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,19 +8,14 @@ import '../Styles/NavBar.css';
 
 
 export default function NavBar() {
-
-  const [activePage, setActivePage] = useState("home"); // State variable to track active page
+  
+  const [activePage, setActivePage] = useState(""); // State variable to track active page
+  const location = useLocation(); // Get current location
 
   useEffect(() => {
-    // Set the activePage to 'home' when the component mounts
-    setActivePage('home');
-  }, []);
-
-
-  const handlePageChange = (page) => {
-    setActivePage(page); // Update active page when user navigates to a different page
-    
-  };
+    // Update activePage based on the current location's pathname
+    setActivePage(location.pathname);
+  }, [location.pathname]); // Update when pathname changes
   return (
     <>
       <Navbar className="nav">
@@ -30,42 +26,42 @@ export default function NavBar() {
             </video>
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link
-              href="/"
+            <NavLink
+              to="/"
+              activeClassName="active" // Apply 'active' class when active
               className={`nav-item ${
-                activePage === "home" ? "active" : "inactive"
+                activePage === "/" ? "active" : "inactive"
               }`}
-              onClick={() => handlePageChange("home")}
             >
               Home
-            </Nav.Link>
-            <Nav.Link
-              href="/About"
+            </NavLink>
+            <NavLink
+              to="/About"
+              activeClassName="active" // Apply 'active' class when active
               className={`nav-item ${
-                activePage === "about" ? "active" : "inactive"
+                activePage === "/About" ? "active" : "inactive"
               }`}
-              onClick={() => handlePageChange("about")}
             >
               About
-            </Nav.Link>
-            <Nav.Link
-              href="/Work Experience"
+            </NavLink>
+            <NavLink
+              to="/Work Experience"
+              activeClassName="active" // Apply 'active' class when active
               className={`nav-item ${
-                activePage === "work" ? "active" : "inactive"
+                activePage === "/Work Experience" ? "active" : "inactive"
               }`}
-              onClick={() => handlePageChange("work")}
             >
               Work Experience
-            </Nav.Link>
-            <Nav.Link
-              href="/Contact"
+            </NavLink>
+            <NavLink
+              to="/Contact"
+              activeClassName="active" // Apply 'active' class when active
               className={`nav-item ${
-                activePage === "contact" ? "active" : "inactive"
+                activePage === "/Contact" ? "active" : "inactive"
               }`}
-              onClick={() => handlePageChange("contact")}
             >
               Contact
-            </Nav.Link>
+            </NavLink>
           </Nav>
         </Container>
       </Navbar>
