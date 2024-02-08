@@ -1,17 +1,21 @@
 
 .nav{
     background-color: #20232F;
+    margin: 0px !important;
+    display: block;
     
 }
 
 #cont1{
     display: flex;
     justify-content: space-between;
-
+    max-width: 95% !important;
+    margin-left: 30px 
 }
 
 .me-auto {
-    margin-right: 0px !important; 
+    margin-right: 0px !important;
+    margin-left: 10px; 
 }
 
 .nav .navbar-brand{
@@ -76,3 +80,43 @@
 .nav-item.inactive:hover::after {
   transform: scaleX(1);
 }
+
+
+@media (min-width: 992px){
+
+
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    flex-direction: row-reverse;
+}
+}
+@media (max-width: 992px){
+.nav-item.active {
+   border-bottom: none !important;
+
+  }
+
+  .nav-item.inactive::after {
+   border-bottom: none !important;
+
+  }
+  
+  .navbar-toggler:focus{
+    box-shadow: none;
+  }
+  .navbar-toggler {
+    outline: 1px solid #F9A620 !important;
+    margin-right: 2rem;
+    padding-bottom: 0.4rem;    
+}
+ .navbar-toggler- {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(249, 166, 32, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+      
+ } 
+
+ .icon{
+      color: #F9A620;
+       ;
+ }
