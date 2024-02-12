@@ -1,17 +1,44 @@
-.flex-items{
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    text-align: left;
-    margin: 45px;
-    font-weight: 800;
+.flex-items {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  margin: 45px;
+  font-weight: 800;
+  flex: 1;
+  margin-left: 100px;
+  margin-right: 0px;
 }
 
-.flex-item1{
-    font-size: 40px;
+.flex-item1 {
+  font-size: 2.5rem;
 }
-.flex-item2{
-    font-size: 70px;
+.flex-item2 {
+  font-size: 5rem;
 }
+.profiledisplay {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  z-index: 1;
+}
+@keyframes profpic {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-1rem) scale(1.03);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+.flex-items img {
+  max-width: 80%;
+  display: block; /* Ensure the image behaves as a block element */
+  margin: 0 auto;
+  animation: profpic 4s ease-in-out infinite;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -29,11 +56,146 @@
     opacity: 0;
   }
 }
-.multiple-text{
-    color: #F9A620 ;
-    animation: fade-in 0.5s ease-in-out forwards
+.multiple-text {
+  color: #f9a620;
+  animation: fade-in 0.5s ease-in-out forwards;
 }
 
 .multiple-text.typed-fade-out {
   animation: fade-out 1s ease-in-out forwards;
+}
+.flex-item3 {
+  margin-top: 3rem;
+  font-weight: 400;
+  text-align: justify;
+}
+.spline {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 120%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: fadeOut 5s linear forwards;
+  animation-delay: 10s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+.spline1 {
+  width: 100%; /* Set the desired width */
+  overflow-y: hidden;
+  height: 30rem !important;
+  transform: scale(1.2);
+  clip-path: inset(0 0 40% 0);
+}
+
+.grad-details {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.114);
+  box-shadow: rgba(38, 57, 77, 0.114) 0px 22px 70px 4px;
+  margin: 0rem 5rem;
+  border-radius: 0.3rem;
+  font-family: "Roboto", sans-serif;
+  position: relative; /* Add position relative for proper positioning of the border animation */
+  overflow: hidden; /* Hide overflow to prevent overflow of the animated border */
+  border: 2px solid transparent; /* Ensure a constant border-width */
+  transition: border-color 0.5s ease; /* Transition only the border-color property */
+}
+
+.grad-details:hover {
+  border-color: #f9a620; /* Change the border color on hover or scroll */
+}
+.cont1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.inst-name{
+  width: 40%;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+.Date{
+  padding: 1rem;
+  text-align:justify;
+}
+.Contact{
+  color: white;
+  padding: 1rem;
+  
+}
+
+.Contact svg{
+  color: green;
+  transform: rotate(90deg);
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.head{
+  text-align: left;
+  font-size: 2rem;
+  display: flex;
+  margin: 4rem 4rem 0 4rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  
+}
+.icon1{
+  width: 100%; /* Set the desired width */
+  overflow-y: hidden;
+  height: 35rem !important;
+  clip-path: inset(0 0 10% 0);
+  transform: scale(0.5);
+}
+
+.gmail{
+  width: 100% !important;
+}
+/* --------- Media Query ---------------- */
+@media (max-width: 992px) {
+  .flex-item1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .flex-item2 {
+    font-size: 2.7rem;
+    text-align: center;
+  }
+  .profiledisplay {
+    flex-direction: column-reverse;
+  }
+
+  .flex-items {
+    margin: 40px;
+  }
 }

@@ -1,41 +1,47 @@
-
-.nav{
-    background-color: #20232F;
-    margin: 0px !important;
-    display: block;
-    
+.nav {
+  background-color: #20232f;
+  margin: 0px !important;
+  display: block;
+  transition: background-color 1s ease-in-out, box-shadow 1s ease-in-out;
+  z-index: 2;
 }
 
-#cont1{
-    display: flex;
-    justify-content: space-between;
-    max-width: 95% !important;
-    margin-left: 30px 
+.nav.scrolled {
+  background-color: #20232fc4; /* Adjust the alpha value for transparency */
+  transition: box-shadow, background-color 1s ease-in-out,
+    box-shadow 1s ease-in-out; /* Add a smooth transition effect */
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+#cont1 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 90% !important;
+  margin-left: 5.1rem;
 }
 
 .me-auto {
-    margin-right: 0px !important;
-    margin-left: 10px; 
+  margin-right: 0px !important;
+  margin-left: 10px;
 }
 
-.nav .navbar-brand{
-    color: white;
-    margin: 0px;
-    padding: 0px;
+.nav .navbar-brand {
+  color: white;
+  margin: 0px;
+  padding: 0px;
 }
 
-#cont1 .nav-link{
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px ;
-    padding: 5px 5px;
-    margin: 0px 15px;
+#cont1 .nav-link {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  padding: 5px 5px;
+  margin: 0px 15px;
 }
-
 
 .nav-item.active {
-  color: #F9A620 !important;
-  border-bottom: 3px solid #F9A620;
+  color: #f9a620 !important;
+  border-bottom: 3px solid #f9a620;
   padding-bottom: 0px;
   text-decoration: none;
 }
@@ -43,16 +49,16 @@
 .nav-item {
   position: relative;
   color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px ;
-    padding: 5px 5px;
-    margin: 0px 15px; /* Increase the distance between the text and the next element */
-    text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  padding: 5px 5px;
+  margin: 0px 15px; /* Increase the distance between the text and the next element */
+  text-decoration: none;
 }
 
 .nav-item.inactive {
   color: rgb(199, 199, 199) !important;
-  transform: scale(0.8); 
+  transform: scale(0.8);
   display: inline-block;
 }
 
@@ -60,18 +66,18 @@
   transform: scale(1);
   transition-duration: 0.4s !important;
   transition: ease-in-out;
-  color: #F9A620 !important;
+  color: #f9a620 !important;
 }
 
 .nav-item.inactive::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 0;
   bottom: 0px; /* Increase the distance between the border and the text */
   width: 100%;
-  border-bottom: 3px solid #F9A620;
-  background-color: #F9A620;
+  border-bottom: 3px solid #f9a620;
+  background-color: #f9a620;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.4s ease-in-out;
@@ -81,42 +87,41 @@
   transform: scaleX(1);
 }
 
-
-@media (min-width: 992px){
-
-
-.navbar-expand-lg .navbar-collapse {
-    display: flex!important;
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
     flex-basis: auto;
     flex-direction: row-reverse;
+  }
 }
-}
-@media (max-width: 992px){
-.nav-item.active {
-   border-bottom: none !important;
-
+@media (max-width: 992px) {
+  .nav-item.active {
+    border-bottom: none !important;
   }
 
   .nav-item.inactive::after {
-   border-bottom: none !important;
-
+    border-bottom: none !important;
   }
-  
-  .navbar-toggler:focus{
+
+  .navbar-toggler:focus {
     box-shadow: none;
   }
   .navbar-toggler {
-    outline: 1px solid #F9A620 !important;
-    margin-right: 2rem;
-    padding-bottom: 0.4rem;    
+    outline: 1px solid #f9a620 !important;
+    /* margin-right: 2rem; */
+    padding-bottom: 0.4rem;
+  }
+  .navbar-toggler- {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(249, 166, 32, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  #cont1 {
+    margin: 0rem 2rem;
+    .me-auto {
+      transform: translateX(-1rem);
+    }
+  }
 }
- .navbar-toggler- {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(249, 166, 32, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        }
-      
- } 
 
- .icon{
-      color: #F9A620;
-       ;
- }
+.icon {
+  color: #f9a620;
+}
