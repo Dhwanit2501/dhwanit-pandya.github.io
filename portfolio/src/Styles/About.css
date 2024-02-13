@@ -1,0 +1,56 @@
+.carousel-image {
+  width: 95%; /* Ensure the image fills its container */
+  height: auto; /* Allow the image to scale proportionally */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.carousal{
+    flex:1;
+    margin: 0 4rem;
+    max-height: 60%; /* Set a fixed maximum height for the carousel container */
+  overflow: hidden; /* Hide any overflow content */
+}
+.carousal h3{
+    font-family: "PT Serif", serif;
+    font-size: 3rem;
+}
+.cont2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 2rem;
+    align-items: stretch;
+}
+.carousel-caption {
+    position: absolute;
+    bottom: 1.9rem;
+    left: 1rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    width: 95%;
+    background-color:#0000007a;
+}
+.aboutme{
+    color: aliceblue;
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.abthead{
+    font-size: 5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.abttext{
+    font-size:1rem;
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+    margin: 1rem;
+}
