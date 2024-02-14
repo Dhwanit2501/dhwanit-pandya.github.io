@@ -54,3 +54,9 @@
     text-align: justify;
     margin: 1rem;
 }
+
+.letter{
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-right: 0.15rem;
+}

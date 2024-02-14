@@ -87,6 +87,41 @@
   transform: scaleX(1);
 }
 
+.nav-item.activec {
+  color: rgb(199, 199, 199) !important;
+  transform: scale(0.8);
+  display: inline-block;
+  border-bottom: transparent;
+}
+.nav-item.inactivec {
+  display: none;
+
+}
+.nav-item.activec:hover {
+  transform: scale(1);
+  transition-duration: 0.4s !important;
+  transition: ease-in-out;
+  color: #f9a620 !important;
+}
+
+.nav-item.activec::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0px; /* Increase the distance between the border and the text */
+  width: 100%;
+  border-bottom: 3px solid #f9a620;
+  background-color: #f9a620;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-item.activec:hover::after {
+  transform: scaleX(1);
+}
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-collapse {
     display: flex !important;

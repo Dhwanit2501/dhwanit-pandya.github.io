@@ -24,7 +24,7 @@ export default function Home() {
       typed.destroy();
     };
   }, []);
-  
+
   useEffect(() => {
     ScrollReveal({
       reset: true,
@@ -34,6 +34,9 @@ export default function Home() {
     });
     ScrollReveal().reveal(".flex-items", { origin: "top" });
     ScrollReveal().reveal("#profilepic", { origin: "bottom" });
+    ScrollReveal().reveal(".grad-details", { origin: "left" });
+    ScrollReveal().reveal(".head", { origin: "right" });
+    ScrollReveal().reveal(".icon1", { origin: "bottom" });
   }, []);
 
   useEffect(() => {
@@ -42,7 +45,6 @@ export default function Home() {
     script.type = "module";
     script.src =
       "https://unpkg.com/@splinetool/viewer@1.0.51/build/spline-viewer.js";
-      
 
     // Append the script to the document body
     document.body.appendChild(script);
@@ -64,7 +66,30 @@ export default function Home() {
       setAnimationPlayed(true);
     }
   }, []);
-  
+const [dateTime, setDateTime] = useState(new Date());
+
+useEffect(() => {
+  const timerID = setInterval(() => tick(), 1000); // Update date and time every second
+
+  return () => {
+    clearInterval(timerID); // Cleanup function to clear interval when component unmounts
+  };
+}, []); // Empty dependency array ensures effect runs only once after initial render
+
+function tick() {
+  setDateTime(new Date()); // Update date and time
+}
+
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const dayOfWeek = days[dateTime.getDay()];
 
   return (
     <>
@@ -73,6 +98,15 @@ export default function Home() {
         <div className={animationPlayed ? "spline" : ""}>
           {animationPlayed && (
             <spline-viewer url="https://prod.spline.design/YQg46qiMyiHhufwr/scene.splinecode"></spline-viewer>
+          )}
+        </div>
+        <div className="dtd">
+          {animationPlayed && (
+            <>
+              <h2>{dateTime.toLocaleTimeString()}</h2>
+              <h2>{dateTime.toLocaleDateString()}</h2>
+              <h2>{dayOfWeek}</h2>
+            </>
           )}
         </div>
         <div className="profiledisplay">
@@ -130,7 +164,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="Contact">
+        <div className="Contact" id="contact">
           <div className="head">
             <svg
               xmlns="http://www.w3.org/2000/svg"

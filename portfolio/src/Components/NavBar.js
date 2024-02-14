@@ -132,6 +132,21 @@ export default function NavBar() {
     };
   }, []);
 
+  // Function to handle click event
+  const handleClick = () => {
+    // Check if the current page is the homepage
+    if (location.pathname === "/") {
+      // Scroll to the contact section on the homepage
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        const offset = -50; // Adjust scroll position by 50px up (negative value for upward scroll)
+        window.scrollTo({
+          top: contactSection.offsetTop + offset,
+          behavior: "smooth",
+        });
+      }
+    } 
+  };
   return (
     <Navbar
       className={`nav ${isScrolled ? "scrolled" : ""}`}
@@ -178,10 +193,10 @@ export default function NavBar() {
               Work Experience
             </NavLink>
             <NavLink
-              to="/Contact"
+              onClick={handleClick}
               activeClassName="active"
               className={`nav-item ${
-                activePage === "/Contact" ? "active" : "inactive"
+                activePage === "/" ? "activec" : "inactivec"
               }`}
             >
               Contact

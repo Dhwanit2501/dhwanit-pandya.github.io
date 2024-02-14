@@ -81,7 +81,16 @@
   animation: fadeOut 5s linear forwards;
   animation-delay: 10s;
 }
-
+h2{
+  color: white !important;
+  font-family: "Protest Riot", sans-serif;
+  position: relative;
+  z-index: 3;
+  animation: fadeOut 5s linear forwards;
+  animation-delay: 5s;
+  top:12rem;
+  
+}
 @keyframes fadeOut {
   0% {
     opacity: 1;

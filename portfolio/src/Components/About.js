@@ -1,7 +1,7 @@
 import NavBar from "./NavBar";
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
-
+import Footer from "./Footer";
 import Carousel from "react-bootstrap/Carousel";
 import "../Styles/About.css"
 
@@ -78,32 +78,35 @@ export default function About() {
               way here.Let me give you a glimpse into who I am.
             </p>
             <p>
-              Candidness is a cornerstone of my personality, guiding me through
-              life's ups and downs. But through it all, I've learned that life's
-              about the journey, not just the destination. Whether I'm hitting
-              the gym for an intense workout, engaging in heartfelt
-              conversations, or dreaming up bold adventures, authenticity is
-              always my guiding principle.
+              <span className="letter">C</span>andidness is a cornerstone of my
+              personality, guiding me through life's ups and downs. But through
+              it all, I've learned that life's about the journey, not just the
+              destination. Whether I'm hitting the gym for an intense workout,
+              engaging in heartfelt conversations, or dreaming up bold
+              adventures, authenticity is always my guiding principle.
             </p>
             <p>
-              Athleticism is more than just a hobby—it's a passion that drives
-              me to push my limits. From challenging hikes to intense workouts,
-              I thrive on the rush of adrenaline. Team sports, especially
-              cricket, hold a special place in my heart as they not only offer
-              the thrill of competition but also teach invaluable lessons about
-              teamwork, crucial in every aspect of life.
+              <span className="letter">A</span>thleticism is more than just a
+              hobby—it's a passion that drives me to push my limits. From
+              challenging hikes to intense workouts, I thrive on the rush of
+              adrenaline. Team sports, especially cricket, hold a special place
+              in my heart as they not only offer the thrill of competition but
+              also teach invaluable lessons about teamwork, crucial in every
+              aspect of life.
             </p>
             <p>
-              When it comes to vision, I'm all about seeing the big picture.
-              With every step, I'm fueled by the belief that the future is full
-              of endless possibilities. I'm constantly leveling up, seizing
-              every opportunity to learn and grow.
+              When it comes to <span className="letter">V</span>ision, I'm all
+              about seeing the big picture. With every step, I'm fueled by the
+              belief that the future is full of endless possibilities. I'm
+              constantly leveling up, seizing every opportunity to learn and
+              grow.
             </p>
             <p>
-              Exploratory by nature, I'm always eager to embrace new challenges
-              and expand my horizons. In today's fast-paced world, I thrive on
-              staying ahead of the curve, eagerly learning new technologies and
-              stepping out of my comfort zone to adapt to evolving trends.
+              <span className="letter">E</span>xploratory by nature, I'm always
+              eager to embrace new challenges and expand my horizons. In today's
+              fast-paced world, I thrive on staying ahead of the curve, eagerly
+              learning new technologies and stepping out of my comfort zone to
+              adapt to evolving trends.
             </p>
             <p>
               That's a snapshot of who I am! Thanks for joining me here. Let's
@@ -115,6 +118,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
