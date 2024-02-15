@@ -1,0 +1,10 @@
+.projcont{
+margin: 2rem 6rem;
+    min-height: 80vh;
+}
+
+.projcard{
+    display: block;
+    margin: 1rem;
+}
+

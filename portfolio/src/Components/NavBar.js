@@ -155,7 +155,7 @@ export default function NavBar() {
       sticky="top"
     >
       <Container id="cont1">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <video width="70" height="70" autoPlay loop muted>
             <source src="./Images/logo4.webm" type="video/webm" />
           </video>
@@ -184,13 +184,22 @@ export default function NavBar() {
               About
             </NavLink>
             <NavLink
-              to="/Work Experience"
+              to="/WorkExperience"
               activeClassName="active"
               className={`nav-item ${
-                activePage === "/Work Experience" ? "active" : "inactive"
+                activePage === "/WorkExperience" ? "active" : "inactive"
               }`}
             >
               Work Experience
+            </NavLink>
+            <NavLink
+              to="/Projects"
+              activeClassName="active"
+              className={`nav-item ${
+                activePage === "/Projects" ? "active" : "inactive"
+              }`}
+            >
+              Projects
             </NavLink>
             <NavLink
               onClick={handleClick}

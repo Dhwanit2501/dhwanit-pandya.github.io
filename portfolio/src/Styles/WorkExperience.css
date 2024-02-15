@@ -1,0 +1,63 @@
+.expcont{
+    margin: 2rem 6rem;
+    min-height: 80vh;
+}
+
+.card img{
+  max-width: 30%;
+  height: auto;
+  object-fit: cover;
+  flex:1;
+  padding:1rem;
+  border-radius: 1.5rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.847);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 2rem;
+font-family: "PT Serif", serif;}
+
+.compname{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.doe{
+    font-size: 1rem;
+}
+
+.desig{
+    margin: 0.5rem;
+    font-size: 1rem;
+    font-family: "PT Serif", serif;
+    font-weight: 600;
+}
+.workinfo{
+    margin: 1rem 2rem;
+    font-family: "PT Serif", serif;
+    text-align: justify;
+}
+.lasttext{
+    font-family: "PT Serif", serif;
+    text-align: justify;
+    margin: 0 2rem;
+}
+.techstack{
+    font-weight: 600;
+    font-family: "PT Serif", serif;
+}
