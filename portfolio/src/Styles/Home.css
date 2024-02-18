@@ -207,4 +207,48 @@ h2{
   .flex-items {
     margin: 40px;
   }
+  .cont1{
+    flex-direction: column;
+  }
+  .inst-name{
+    width: 100%;
+  }
+  .grad-details{
+    margin: 2rem;
+  }
+  .details{
+    width: 100%;
+  }
+  #date{
+    text-align: center;
+  }
+  .Contact svg{
+    width: 2.5rem;
+    height: 2rem;
+  }
+  .head{
+    font-size: 1.4rem;
+    margin: 1rem 1rem 0 1rem;
+  }
+  .icons{
+    flex-direction: column;
+  }
+  .spline1 {
+  width: 412px; /* Set the desired width */
+  height: 915px; /* Set the desired height */
+  overflow: hidden; /* Hide any overflow */
+  position: relative; /* Ensure position context */
+}
+
+.spline1 {
+    width: 700px !important;
+    transform: scale(0.5);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: -150px;
+}
+.Contact{
+  margin-top: 5rem;
+}
 }

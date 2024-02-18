@@ -36,8 +36,10 @@ export default function Home() {
     ScrollReveal().reveal(".flex-items", { origin: "top" });
     ScrollReveal().reveal("#profilepic", { origin: "bottom" });
     ScrollReveal().reveal(".grad-details", { origin: "left" });
-    ScrollReveal().reveal(".head", { origin: "right" });
+    ScrollReveal().reveal(".head", {origin: window.matchMedia("(max-width: 992px)").matches ? "left" : "right" 
+    });
     ScrollReveal().reveal(".icon1", { origin: "bottom" });
+    
   }, []);
 
   useEffect(() => {
@@ -142,7 +144,7 @@ const dayOfWeek = days[dateTime.getDay()];
             <div className="cont1">
               <div className="inst-name">{edu.univname}</div>
               <div className="details">
-                <span className="Date">{edu.duration}</span>
+                <span className="Date" id="date">{edu.duration}</span>
                 <span className="Date">{edu.degree}</span>
                 <span className="Date">{edu.description}</span>
               </div>
