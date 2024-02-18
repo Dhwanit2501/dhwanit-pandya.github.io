@@ -5,8 +5,8 @@ import ScrollReveal from "scrollreveal";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import cardData from "./cardData"; 
-import pubData from "./pubData";
+import cardData from "./Data/cardData"; 
+import pubData from "./Data/pubData";
 import "../Styles/Projects.css";
 
 export default function Projects() {

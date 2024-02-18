@@ -3,6 +3,7 @@ import Footer from "./Footer"
 import NavBar from "./NavBar"
 import Typed from "typed.js";
 import ScrollReveal from "scrollreveal";
+import eduDet from "./Data/Edudetails";
 import "../Styles/Home.css"
 export default function Home() {
   useEffect(() => {
@@ -136,34 +137,18 @@ const dayOfWeek = days[dateTime.getDay()];
         <div className="spline1">
           <spline-viewer url="https://prod.spline.design/6RMtuzahayfgzdly/scene.splinecode"></spline-viewer>
         </div>
-        <div className="grad-details">
-          <div className="cont1">
-            <div className="inst-name">
-              Dwarkadas J. Sanghvi College of Engineering
-            </div>
-            <div className="details">
-              <span className="Date">2019 - 2023</span>
-              <span className="Date">
-                Bachleor of Technology in Electronics and Telecommunication
-                Engineering
-              </span>
-              <span className="Date">
-                I completed my undergraduate in EXTC which not only gave me an
-                understanding of the hardware technology that powers electronic
-                devices but also provided a comprehensive grasp of diverse
-                facets within the field of computer science. During my academic
-                journey, I was exposed to various subjects, including Computer
-                Networks, Internet Engineering and Network Security, and Big
-                Data Analytics, which deepened my comprehension of cloud
-                architecture, query optimization, and network security.
-                Furthermore, engaging in the practical lab on Data Structures,
-                and Algorithms helped me hone my programming skills using
-                various languages. My hard work and dedication throughout my
-                academic journey earned me a CGPA of 9.24/10.
-              </span>
+        {eduDet.map((edu, index) => (
+          <div className="grad-details" key={index}>
+            <div className="cont1">
+              <div className="inst-name">{edu.univname}</div>
+              <div className="details">
+                <span className="Date">{edu.duration}</span>
+                <span className="Date">{edu.degree}</span>
+                <span className="Date">{edu.description}</span>
+              </div>
             </div>
           </div>
-        </div>
+        ))}
         <div className="Contact" id="contact">
           <div className="head">
             <svg
