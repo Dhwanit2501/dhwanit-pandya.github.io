@@ -1,6 +1,6 @@
 const cardData = [
   {
-    imageUrl: "speed.png",
+    imageUrl: "Speed.png",
     title: "Smart Portable ECG EKG Device",
     description:
       "Developed a portable ECG device for early detection and diagnosis of heart disease, remote monitoring of patients with cardiac problems such as Arrhythmias and cardiac arrest, storing data in Firebase Realtime Database,processing data using CNN model, and providing accurate real-time feedback to patients via website and app built using React and Flask.",
