@@ -111,15 +111,13 @@ export default function Home() {
             <spline-viewer url="https://prod.spline.design/YQg46qiMyiHhufwr/scene.splinecode"></spline-viewer>
           )}
         </div>
-        <div className="dtd">
-          {animationPlayed && (
-            <>
-              <h2>{dateTime.toLocaleTimeString()}</h2>
-              <h2>{dateTime.toLocaleDateString()}</h2>
-              <h2>{dayOfWeek}</h2>
-            </>
-          )}
-        </div>
+        {animationPlayed && (
+          <div className="dtd">
+                <h2>{dateTime.toLocaleTimeString()}</h2>
+                <h2>{dateTime.toLocaleDateString()}</h2>
+                <h2>{dayOfWeek}</h2>
+          </div>
+        )}
         <div className="profiledisplay">
           <div className="flex-items">
             <div className="flex-item1">Hello, It's Me</div>

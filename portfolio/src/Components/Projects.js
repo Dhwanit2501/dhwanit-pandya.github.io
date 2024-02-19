@@ -10,7 +10,7 @@ import pubData from "./Data/pubData";
 import "../Styles/Projects.css";
 
 export default function Projects() {
-  
+
   // ------------ Reveal on Scroll ------------
   useEffect(() => {
     // Initialize ScrollReveal
@@ -68,24 +68,27 @@ export default function Projects() {
                     {data.TechStackUsed}
                   </Card.Title>
                   <Card.Title className="projlink">
-                    <a
-                      href={data.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src="/Images/github.png" />
-                    </a>
-                    {data.link ? (
+                    <div className="gitwebl">
                       <a
-                        href={data.link}
+                        href={data.github}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Link To Website
+                        <img src="/Images/github.png" />
                       </a>
-                    ) : (
-                      <span className="no-link">Link To Website</span>
-                    )}
+                      {data.link ? (
+                        <a
+                          href={data.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Link To Website
+                        </a>
+                      ) : (
+                        <span className="no-link">Link To Website</span>
+                      )}
+                    </div>
+                    <span className="result">Secured: {data.result}</span>
                   </Card.Title>
                 </Card.Body>
               </Card>

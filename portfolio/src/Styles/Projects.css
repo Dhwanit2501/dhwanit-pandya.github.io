@@ -1,129 +1,142 @@
-.projcont{
-margin: 2rem 6rem;
-    min-height: 80vh;
-    font-family: "PT Serif", serif;
+.projcont {
+  margin: 2rem 6rem;
+  min-height: 80vh;
+  font-family: "PT Serif", serif;
 }
 
-.projcard{
-    display: block;
-    margin: 1rem;
-    border: 3px solid transparent;
-    transition: transform 0.5s ease-in-out, border 0.5s ease-in-out;
+.projcard {
+  display: block;
+  margin: 1rem;
+  border: 3px solid transparent;
+  transition: transform 0.5s ease-in-out, border 0.5s ease-in-out;
 }
-.projcard:hover{
-    transform: scale(1.05) !important;
-    transition: 0.5s ease-in-out;
-    border: 3px solid #f9a620;
+.projcard:hover {
+  transform: scale(1.02) !important;
+  transition: 0.5s ease-in-out;
+  border: 3px solid #f9a620;
 }
 
-#projimg{
+#projimg {
   max-width: 100%;
   height: auto;
   object-fit: cover;
-  padding:1rem;
+  padding: 1rem;
   border-radius: 1.5rem;
 }
 
-.projtitle{
-    font-size: 1.2rem;
-    font-weight: 600;
+.projtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
-.projtext{
-    text-align: justify;
-    padding: 1rem;
-    font-size: 0.8rem;
-    margin-bottom: 0;
-}
-
-.projtech{
-    font-size: 0.8rem;
-    font-weight: 600;
-
-}
-.projlink{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-    font-size: 1rem;
-}
-.projlink a{
-    text-decoration: none !important;
-    color: black;
-}
-.no-link{
-    color: rgba(117, 117, 117, 0.811);
+.projtext {
+  text-align: justify;
+  padding: 1rem;
+  font-size: 0.8rem;
+  margin-bottom: 0;
 }
 
-.projlink a img{
-    max-width: 3rem;
-    padding: 0;
+.projtech {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.projlink {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+.gitwebl {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.result {
+  margin-top: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f1ab3a;
+}
+.projlink a {
+  text-decoration: none !important;
+  color: black;
+}
+.no-link {
+  color: rgba(117, 117, 117, 0.811);
 }
 
-.projlink a:hover{
-    transform: scale(1.1);
-    transition: 0.5s ease-in-out;
-    color: #f9a620;
+.projlink a img {
+  max-width: 3rem;
+  padding: 0;
 }
 
-.indicol{
-    margin: 0;
+.projlink a:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+  color: #f9a620;
 }
 
-.publication{
-    color: white;
-    text-align: left;
-margin: 6rem;  
+.indicol {
+  margin: 0;
 }
 
-.publicationtitle{
-    font-size: 4rem;
-  
+.publication {
+  color: white;
+  text-align: left;
+  margin: 6rem;
+}
+
+.publicationtitle {
+  font-size: 4rem;
+
   font-weight: 400;
   font-family: "PT Serif", serif;
   display: flex;
   align-items: flex-start;
 }
 
-.publicationtitle img{
-    width: 5rem;
-    margin-right: 1rem;
+.publicationtitle img {
+  width: 5rem;
+  margin-right: 1rem;
 }
 
-.publicationtext{
-    margin: 3rem 1rem;
-    font-size: 1.3rem;
-    border: 2px solid;
-    border-color: white;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    transition: border-color 1s ease-in-out;
+.publicationtext {
+  margin: 3rem 1rem;
+  font-size: 1.3rem;
+  border: 2px solid;
+  border-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: border-color 1s ease-in-out;
 }
-.publicationtext:hover{
-    border-color: #f9a620;
-    transition: 1s ease-in-out !important;
+.publicationtext:hover {
+  border-color: #f9a620;
+  transition: 1s ease-in-out !important;
 }
 
-.publicationtext img{
-    width: 2rem;
-    margin:0 1rem;
+.publicationtext img {
+  width: 2rem;
+  margin: 0 1rem;
 }
 
 @media (max-width: 992px) {
-    .projcont {
-    margin: 2rem
-    }
-    .publication{
-        margin: 2rem;
-    }
-    .publicationtitle {
+  .projcont {
+    margin: 2rem;
+  }
+  .publication {
+    margin: 2rem;
+  }
+  .publicationtitle {
     font-size: 2.5rem;
-    margin-left: 0.5rem 
-}
-.publicationtitle img {
+    margin-left: 0.5rem;
+  }
+  .publicationtitle img {
     width: 3.5rem;
-}
-.publicationtext {
+  }
+  .publicationtext {
     font-size: 1rem;
-}
+  }
 }
