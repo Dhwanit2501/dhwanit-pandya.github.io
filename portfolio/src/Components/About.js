@@ -6,7 +6,7 @@ import Carousel from "react-bootstrap/Carousel";
 import "../Styles/About.css"
 
 export default function About() {
-  
+   
   // ------------ Reveal on Scroll ------------
   useEffect(() => {
     ScrollReveal({
