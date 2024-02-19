@@ -72,3 +72,34 @@ font-family: "PT Serif", serif;}
     font-weight: 600;
     font-family: "PT Serif", serif;
 }
+
+@media (max-width: 992px) {
+    .card img{
+  max-width: 100%;
+    }
+    .work{
+        display: flex;
+    flex-direction: column;
+    }
+    .expcont {
+    margin: 2rem;
+    min-height: 80vh;
+}
+.title{
+    flex-direction: column;
+    margin: 1rem;
+}
+.doe {
+    font-size: 1.2rem;
+}
+.workinfo {
+    margin: 1rem;
+    
+}
+.lasttext{
+    margin: 1rem;
+}
+.techstack{
+    margin: 1rem 0;
+}
+}

@@ -13,9 +13,16 @@ export default function Projects() {
 useEffect(() => {
   // Initialize ScrollReveal
   const sr = ScrollReveal();
-sr.reveal(".publicationtext", { origin: "left",distance: "15rem",
+  sr.reveal(".publicationtitle", {
+    origin: window.matchMedia("(max-width: 992px)").matches ? "left" : "right",
+    distance: "25rem",
+    duration: 2000,
+    delay: 100,
+    reset: true,
+  });
+sr.reveal(".publicationtext", { origin: "left",distance: "25rem",
       duration: 2000,
-      delay: 100,
+      delay: 1000,
       reset: true, });
   // Define custom function to alternate origins
   const alternateOrigin = (index) => {
