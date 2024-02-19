@@ -6,14 +6,15 @@ import Carousel from "react-bootstrap/Carousel";
 import "../Styles/About.css"
 
 export default function About() {
-
+  
+  // ------------ Reveal on Scroll ------------
   useEffect(() => {
     ScrollReveal({
       reset: true,
       distance: "15rem",
       duration: 2000,
     });
-    ScrollReveal().reveal(".abthead", { origin: "top", delay: 500});
+    ScrollReveal().reveal(".abthead", { origin: "top", delay: 500 });
 
     // Then reveal ".carousal" after ".abthead" with a delay
     ScrollReveal().reveal(".carousal", { origin: "left", delay: 3000 });

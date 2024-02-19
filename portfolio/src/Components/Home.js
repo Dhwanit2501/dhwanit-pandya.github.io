@@ -6,6 +6,7 @@ import ScrollReveal from "scrollreveal";
 import eduDet from "./Data/Edudetails";
 import "../Styles/Home.css"
 export default function Home() {
+  // ------------ Typing Effect ------------
   useEffect(() => {
     const typed = new Typed(".multiple-text", {
       strings: [
@@ -26,6 +27,7 @@ export default function Home() {
     };
   }, []);
 
+  // ------------ Reveal on Scroll ------------
   useEffect(() => {
     ScrollReveal({
       reset: true,
@@ -36,12 +38,15 @@ export default function Home() {
     ScrollReveal().reveal(".flex-items", { origin: "top" });
     ScrollReveal().reveal("#profilepic", { origin: "bottom" });
     ScrollReveal().reveal(".grad-details", { origin: "left" });
-    ScrollReveal().reveal(".head", {origin: window.matchMedia("(max-width: 992px)").matches ? "left" : "right" 
+    ScrollReveal().reveal(".head", {
+      origin: window.matchMedia("(max-width: 992px)").matches
+        ? "left"
+        : "right",
     });
     ScrollReveal().reveal(".icon1", { origin: "bottom" });
-    
   }, []);
 
+  // ------------ Entry Spline Element Runs Only Once ------------
   useEffect(() => {
     // Create a new script element
     const script = document.createElement("script");
@@ -58,6 +63,7 @@ export default function Home() {
     };
   }, []); // Empty dependency array ensures the effect runs only once
 
+  // ------------ To Check if animation has Played and perform the required operations ------------
   const [animationPlayed, setAnimationPlayed] = useState(false);
 
   useEffect(() => {
@@ -69,30 +75,32 @@ export default function Home() {
       setAnimationPlayed(true);
     }
   }, []);
-const [dateTime, setDateTime] = useState(new Date());
 
-useEffect(() => {
-  const timerID = setInterval(() => tick(), 1000); // Update date and time every second
+  // ------------ To Display Date,Time and Day ------------
+  const [dateTime, setDateTime] = useState(new Date());
 
-  return () => {
-    clearInterval(timerID); // Cleanup function to clear interval when component unmounts
-  };
-}, []); // Empty dependency array ensures effect runs only once after initial render
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000); // Update date and time every second
 
-function tick() {
-  setDateTime(new Date()); // Update date and time
-}
+    return () => {
+      clearInterval(timerID); // Cleanup function to clear interval when component unmounts
+    };
+  }, []); // Empty dependency array ensures effect runs only once after initial render
 
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-const dayOfWeek = days[dateTime.getDay()];
+  function tick() {
+    setDateTime(new Date()); // Update date and time
+  }
+
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const dayOfWeek = days[dateTime.getDay()];
 
   return (
     <>
@@ -144,7 +152,9 @@ const dayOfWeek = days[dateTime.getDay()];
             <div className="cont1">
               <div className="inst-name">{edu.univname}</div>
               <div className="details">
-                <span className="Date" id="date">{edu.duration}</span>
+                <span className="Date" id="date">
+                  {edu.duration}
+                </span>
                 <span className="Date">{edu.degree}</span>
                 <span className="Date">{edu.description}</span>
               </div>

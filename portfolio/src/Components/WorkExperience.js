@@ -7,20 +7,12 @@ import Card from "react-bootstrap/Card";
 import "../Styles/WorkExperience.css";
 
 export default function WorkExperience() {
-  // useEffect(() => {
-  //   ScrollReveal({
-  //     reset: true,
-  //     distance: "15rem",
-  //     duration: 2000,
-  //     delay: 500,
-  //   });
-    
-  //   ScrollReveal().reveal(".card", { origin: "top" });
-  // }, []);
+  
+  // ------------ Reveal on Scroll ------------
   useEffect(() => {
     // Initialize ScrollReveal
     const sr = ScrollReveal();
-    
+
     // Define custom function to alternate origins
     const alternateOrigin = (index) => {
       return index % 2 === 0 ? "left" : "right";
