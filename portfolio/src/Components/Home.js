@@ -11,8 +11,8 @@ export default function Home() {
     const typed = new Typed(".multiple-text", {
       strings: [
         "Frontend Developer^1500",
-        "Cybersecurity Expert^1500",
-        "Student^1500",
+        "Cybersecurity Enthusiast^1500",
+        "Learner^1500",
       ],
       typeSpeed: 100,
       fadeOut: true,
@@ -113,9 +113,9 @@ export default function Home() {
         </div>
         {animationPlayed && (
           <div className="dtd">
-                <h2>{dateTime.toLocaleTimeString()}</h2>
-                <h2>{dateTime.toLocaleDateString()}</h2>
-                <h2>{dayOfWeek}</h2>
+            <h2>{dateTime.toLocaleTimeString()}</h2>
+            <h2>{dateTime.toLocaleDateString()}</h2>
+            <h2>{dayOfWeek}</h2>
           </div>
         )}
         <div className="profiledisplay">
@@ -126,16 +126,16 @@ export default function Home() {
               And I am a <span className="multiple-text"></span>
             </div>
             <div className="flex-item3">
-              Currently working at EY as a Senior Analyst in Tech Consulting
-              (Cybersecurity). I’m a B.Tech graduate in Electronics and
-              Telecommunication Engineering from Dwarkadas J. Sanghvi College Of
-              Engineering. I am interested in web development, acquired my
-              skillset in Front-End, and now currently working on my Back-End
-              skills. Apart from web development I also possess coding skills
-              along with knowledge of various languages like C, C++. I am also a
-              passionate learner and open to trying new things. Looking forward
-              to an opportunity to work with new faces and internships for more
-              work experience.
+              I am an inquisitive and resilient computer science enthusiast with
+              proficiency in languages such as C++, Python, and Java along with
+              a good hold over web development. Utilizing my role as a Senior
+              Analyst in Tech Consulting (Cybersecurity) at EY, where I've
+              actively contributed to numerous projects, I've come to recognize
+              that my practical knowledge has further enhanced my expertise,
+              seamlessly aligning with my theoretical understanding. I eagerly
+              look forward to engaging with new faces and exploring internship
+              opportunities where I can leverage my technical skillset to make
+              valuable contributions.
             </div>
           </div>
           <div className="flex-items" id="profilepic">
