@@ -84,6 +84,14 @@ export default function Projects() {
                         >
                           Link To Website
                         </a>
+                      ) : data.videoLink ? (
+                        <a
+                          href={data.videoLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Demo Video
+                        </a>
                       ) : (
                         <span className="no-link">Link To Website</span>
                       )}
