@@ -3,7 +3,7 @@ const cardData = [
     imageUrl: "dashboard.png",
     title: "BACKOPS.AI",
     description:
-      "As part of the Luddy Hackathon 2024 @IUB, we worked on a case provided by Service Now and developed an AI agent to operate a backend system, addressing the challenge of simplifying system management by enabling natural language interactions and making complex tasks accessible and efficient for non-technical users.",
+      "As part of the Luddy Hackathon 2024 @ Indiana University Bloomington, we worked on a case provided by Service Now and developed an AI agent to operate a backend system, addressing the challenge of simplifying system management by enabling natural language interactions and making complex tasks accessible and efficient for non-technical users.",
     TechStackUsed:
       "FastAPI, LLM: ChatGPT-4, SQLite, HTML, CSS, JS, and VCS - Git.",
     videoLink: "https://www.youtube.com/watch?v=TdIGMo6VuT8",
@@ -12,7 +12,8 @@ const cardData = [
   },
   {
     imageUrl: "ADPR.png",
-    title: "APDR",
+    title:
+      "Automobile Accident, Prevention, Detection, Reporting System, and Communication using Li-Fi Technology",
     description:
       "To solve the global road accident and driver fatigue problem, we built a system that connects two vehicles at 200 Gbps using Li-Fi technology, combats intoxication, and drowsiness, and swiftly delivers accident data to emergency services. A user-authenticated website built to provide drivers with a  real-time graphical analysis of engine temperature and driver fatigue .",
     TechStackUsed:

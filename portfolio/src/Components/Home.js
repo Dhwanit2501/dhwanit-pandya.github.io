@@ -10,8 +10,10 @@ export default function Home() {
   useEffect(() => {
     const typed = new Typed(".multiple-text", {
       strings: [
-        "Frontend Developer^1500",
-        "Cybersecurity Enthusiast^1500",
+        "Cybersecurity Analyst^1500",
+        "Software Developer^1500",
+        "Team Player^1500",
+        "Problem Solver^1500",
         "Learner^1500",
       ],
       typeSpeed: 100,
@@ -106,18 +108,18 @@ export default function Home() {
     <>
       <div>
         <NavBar />
-        <div className={animationPlayed ? "spline" : ""}>
+        {/* <div className={animationPlayed ? "spline" : ""}>
           {animationPlayed && (
             <spline-viewer url="https://prod.spline.design/YQg46qiMyiHhufwr/scene.splinecode"></spline-viewer>
           )}
-        </div>
-        {animationPlayed && (
+        </div> */}
+        {/* {animationPlayed && (
           <div className="dtd" id="dtd">
             <h2>{dateTime.toLocaleTimeString()}</h2>
             <h2>{dateTime.toLocaleDateString()}</h2>
             <h2>{dayOfWeek}</h2>
           </div>
-        )}
+        )} */}
         <div className="profiledisplay">
           <div className="flex-items">
             <div className="flex-item1">Hello, It's Me</div>
@@ -126,16 +128,18 @@ export default function Home() {
               And I am a <span className="multiple-text"></span>
             </div>
             <div className="flex-item3">
-              I am an inquisitive and resilient computer science enthusiast with
-              proficiency in languages such as C++, Python, and Java along with
-              a good hold over web development. Utilizing my role as a Senior
-              Analyst in Tech Consulting (Cybersecurity) at EY, where I've
-              actively contributed to numerous projects, I've come to recognize
-              that my practical knowledge has further enhanced my expertise,
-              seamlessly aligning with my theoretical understanding. I eagerly
-              look forward to engaging with new faces and exploring internship
-              opportunities where I can leverage my technical skillset to make
-              valuable contributions.
+              I am a security-focused computer science graduate with an
+              attacker’s mindset and a defender’s discipline. Skilled in
+              offensive security tools, coding languages (Python, C++) and
+              defensive frameworks, I bridge theory and practice as a
+              Cybersecurity Analyst at Ernst & Young, where I assisted in
+              security assessments, threat modeling, and gap analysis for
+              enterprise clients.
+              <br></br>
+              <br></br>
+              My goal is to design resilient systems and stay ahead of evolving
+              threats. I am actively exploring opportunities to apply my
+              technical expertise in safeguarding critical infrastructure.
             </div>
           </div>
           <div className="flex-items" id="profilepic">
@@ -154,6 +158,7 @@ export default function Home() {
                   {edu.duration}
                 </span>
                 <span className="Date">{edu.degree}</span>
+                <span className="Date">GPA : {edu.GPA}</span>
                 <span className="Date">{edu.description}</span>
               </div>
             </div>

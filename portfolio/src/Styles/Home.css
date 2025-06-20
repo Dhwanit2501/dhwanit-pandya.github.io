@@ -65,9 +65,11 @@
   animation: fade-out 1s ease-in-out forwards;
 }
 .flex-item3 {
-  margin-top: 3rem;
-  font-weight: 400;
+  margin-top: 5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   text-align: justify;
+  font-family: "Noto Serif", serif;
 }
 .spline {
   position: absolute;
